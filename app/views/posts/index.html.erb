@@ -1,0 +1,16 @@
+<h1>さっぱり分からん</h1>
+<%= link_to '新規投稿するのか、しないのか、どっち？', '/posts/new' %>
+<p>全然分からん</p> 
+<% @posts.each do |post| %>
+  <div class="post">
+    <div class="post-date">
+      投稿日時：<%= post.created_at %>
+    </div>
+    <div class="post-content">
+      <%= post.content %>
+    </div>
+    <div class="post-date_2">
+      <%= post.updated_at %>
+    </div>
+  </div>
+<% end %>
